@@ -55,7 +55,7 @@ class PennFudanDataset(torch.utils.data.Dataset):
 		# suppose all instances are not crowd
 		iscrowd = torch.zeros((num_objs,), dtype=torch.int64)
 
-		target = {}
+		target = dict()
 		target["boxes"] = boxes
 		target["labels"] = labels
 		target["masks"] = masks
